@@ -4,7 +4,7 @@ This is a Streamlit-based application that allows users to upload PDF files and 
 
 ---
 
-## 🚀 Features
+## Features
 
 - Upload PDF files (supports scanned and digital PDFs)
 - Extract and clean text from PDFs
@@ -14,7 +14,7 @@ This is a Streamlit-based application that allows users to upload PDF files and 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: Streamlit
 - **Backend**: Python
