@@ -1,0 +1,12 @@
+streamlit~=1.47.1
+sentence-transformers~=5.0.0
+faiss-cpu~=1.11.0.post1
+transformers
+langchain~=0.3.27
+pymupdf~=1.26.3
+pytesseract~=0.3.13
+torch~=2.2.2+cu121
+pillow~=11.0.0
+numpy~=1.26.4
+huggingface-hub~=0.34.1
+python-dotenv~=1.1.1
