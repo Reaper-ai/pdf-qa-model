@@ -1,16 +1,19 @@
-from io import BytesIO
-import pymupdf
+import easyocr
+import numpy as np
 from PIL import Image
-import pytesseract
+import pymupdf
 import io
 
-def parse_pdf(file: BytesIO, is_ocr: bool = False) -> str:
-    """
-    parses PDF files
 
-    :param path: path to PDF file
-    :param is_ocr: flag whether the PDF file is a scanned image or not
-    :return:  PDF content (list of strings per page)
+reader = easyocr.Reader(['en'], gpu=False)
+
+def parse_pdf(file: io.BytesIO, is_ocr: bool = False) -> str:
+    """
+    Parses a PDF file and extracts text, with optional OCR for scanned PDFs.
+
+    :param file: PDF file as BytesIO
+    :param is_ocr: Whether to use OCR for scanned PDFs
+    :return: Extracted text as a string
     """
     try:
         document = pymupdf.open(stream=file, filetype='pdf')
@@ -18,21 +21,22 @@ def parse_pdf(file: BytesIO, is_ocr: bool = False) -> str:
         raise ValueError(f"Could not open PDF: {e}")
 
     content = []
+
     for page in document:
         if is_ocr:
-            # Convert page to image
             try:
                 pix = page.get_pixmap(dpi=300)
-                img = Image.open(io.BytesIO(pix.tobytes("png")))
-                text = pytesseract.image_to_string(img)
+                img = Image.open(io.BytesIO(pix.tobytes("png"))).convert("RGB")
+                results = reader.readtext(np.array(img), detail=0)
+                text = " ".join(results)
             except Exception as e:
                 text = f"[ERROR performing OCR on page: {e}]"
         else:
             try:
                 text = page.get_text()
             except Exception as e:
-                text = f"[ERROR extracting text from page : {e}]"
+                text = f"[ERROR extracting text from page: {e}]"
 
         content.append(text)
 
-    return '\n'.join(content)
+    return "\n".join(content)
