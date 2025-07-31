@@ -9,3 +9,4 @@ pillow~=11.0.0
 numpy~=1.26.4
 huggingface-hub~=0.34.1
 python-dotenv~=1.1.1
+langchain_huggingface
