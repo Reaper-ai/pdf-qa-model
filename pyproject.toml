@@ -1,0 +1,22 @@
+[project]
+name = "pdf-qa-model"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "easyocr~=1.7.2",
+    "faiss-cpu~=1.11.0.post1",
+    "huggingface-hub~=0.34.1",
+    "langchain~=0.3.27",
+    "langchain-huggingface>=0.3.1",
+    "numpy~=1.26.4",
+    "pdfplumber>=0.11.9",
+    "pillow~=11.0.0",
+    "pymupdf~=1.26.3",
+    "pytesseract~=0.3.13",
+    "python-dotenv~=1.1.1",
+    "sentence-transformers~=5.0.0",
+    "streamlit~=1.47.1",
+    "transformers>=4.57.6",
+]

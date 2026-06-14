@@ -1,20 +1,20 @@
 import re
+import unicodedata
 
-def clean_text(text: str) -> str:
-    """
-    perfroms some artifact cleaning on text
-
-    :param text: content to be cleaned
-    :return: cleaned content
-    """
-
-    text = text.strip()
-
-    # Remove common artifacts
-    text = re.sub(r'\f', '', text)  # Form feed (page break markers)
-    text = re.sub(r'Page \d+', '', text, flags=re.IGNORECASE)
-    text = re.sub(r'\s{2,}', ' ', text)  # Multiple spaces
-    text = re.sub(r'\n+', '\n', text)  # Multiple newlines
-    text = re.sub(r'-\n', '', text)  # Join hyphenated line breaks
-    text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text)  # Line breaks within paragraphs → space
-    return text
+class TextNormalizer:
+    @staticmethod
+    def clean(text: str) -> str:
+        if not text:
+            return ""
+        
+        # 1. Normalize Unicode characters (fixes ligatures and weird accents)
+        text = unicodedata.normalize("NFKC", text)
+        
+        # 2. Fix words split by hyphens at line breaks (e.g., "en- \n vironment")
+        text = re.sub(r'(\w+)-\s*\n\s*(\w+)', r'\1\2', text)
+        
+        # 3. Replace multiple newlines or tabs with a single space (or single newline)
+        text = re.sub(r'\s+', ' ', text)
+        
+        # 4. Strip leading/trailing whitespace
+        return text.strip()
