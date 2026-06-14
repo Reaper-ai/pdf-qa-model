@@ -1,7 +1,3 @@
-Here is a clean, straightforward update for your `README.md` that accurately reflects everything we just built—without any corporate buzzwords or unnecessary jargon.
-
----
-
 # PDF & Document Question Answering App
 
 This is a Streamlit-based application that allows users to upload various document types and ask natural language questions about their content. The app extracts text, normalizes it, handles search using a hybrid retrieval setup, and answers questions using an LLM with precise source citations.
