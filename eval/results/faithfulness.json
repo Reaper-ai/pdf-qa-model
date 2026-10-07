@@ -1,0 +1,33 @@
+{
+  "configs": {
+    "reflection_off": {
+      "n": 40,
+      "answered": 39,
+      "abstentions": 1,
+      "abstention_rate": 0.025,
+      "supported": 33,
+      "unsupported": 6,
+      "hallucination_rate": 0.1538,
+      "supported_rate_overall": 0.825,
+      "generation_ms_median": 1744.31,
+      "errors": 0
+    },
+    "reflection_on": {
+      "n": 40,
+      "answered": 37,
+      "abstentions": 3,
+      "abstention_rate": 0.075,
+      "supported": 34,
+      "unsupported": 3,
+      "hallucination_rate": 0.0811,
+      "supported_rate_overall": 0.85,
+      "generation_ms_median": 1556.28,
+      "errors": 0
+    }
+  },
+  "hallucination_rate_change": {
+    "without": 0.1538,
+    "with": 0.0811,
+    "delta": -0.0727
+  }
+}

@@ -1,6 +1,7 @@
 import json
 import logging
 import re
+import time
 from typing import List, Dict, Any
 
 class RAGEvaluator:
@@ -30,6 +31,56 @@ class RAGEvaluator:
             return 0.5
         except Exception:
             return 0.5
+
+    def judge_supported(self, query: str, answer: str, retrieved_chunks: List[Dict[str, Any]]) -> bool:
+        """
+        Binary faithfulness verdict: is every claim in `answer` supported by
+        the retrieved context? Used by the benchmark for hallucination-rate
+        measurement (reflection ON vs OFF).
+
+        Abstentions ("cannot find...") are reported separately by the caller
+        and never reach this judge.
+        """
+        if not retrieved_chunks:
+            return False
+        combined_context = " ".join(chunk["content"] for chunk in retrieved_chunks)
+
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "You are an unbiased factual auditor. Determine whether every factual claim "
+                    "in the Answer is fully supported by the Reference Context. Ignore style. "
+                    "Do not use outside knowledge.\n\n"
+                    "Respond with exactly one word: 'YES' if the answer is fully supported, "
+                    "or 'NO' if it contains any claim not found in the context."
+                ),
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"Reference Context:\n{combined_context}\n\n"
+                    f"Question: {query}\n\n"
+                    f"Answer to Evaluate: {answer}\n\n"
+                    "Is the Answer fully supported by the context? (YES/NO):"
+                ),
+            },
+        ]
+
+        for attempt in range(3):
+            try:
+                response = self.client.chat_completion(
+                    messages=messages, max_tokens=16, temperature=0.1
+                )
+                text = (response.choices[0].message.content or "").strip().upper()
+                if "YES" in text:
+                    return True
+                if "NO" in text:
+                    return False
+            except Exception as exc:
+                self.logger.warning("judge_supported attempt %d failed: %s", attempt + 1, exc)
+                time.sleep(2 ** attempt)
+        return False
 
     def evaluate_turn(self, query: str, pipeline_output: Dict[str, Any], retrieved_chunks: List[Dict[str, Any]]) -> Dict[str, float]:
         """

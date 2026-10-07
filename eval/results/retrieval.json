@@ -1,0 +1,2150 @@
+{
+  "n_questions": 40,
+  "n_chunks": 414,
+  "configs": {
+    "FAISS (dense only)": {
+      "mode": "dense",
+      "use_reranker": false,
+      "recall@1": 0.225,
+      "recall@5": 0.425,
+      "recall@10": 0.6,
+      "mrr@10": 0.3336,
+      "retrieval_ms_median": 0.05,
+      "retrieval_ms_p95": 0.07,
+      "per_question": {
+        "q01": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            29,
+            28,
+            1,
+            27,
+            31
+          ],
+          "gold_chunks": [
+            1
+          ]
+        },
+        "q02": {
+          "rank_of_first_gold": 9,
+          "top5": [
+            29,
+            27,
+            25,
+            246,
+            28
+          ],
+          "gold_chunks": [
+            1
+          ]
+        },
+        "q03": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            8,
+            243,
+            9,
+            15,
+            95
+          ],
+          "gold_chunks": [
+            8
+          ]
+        },
+        "q04": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            14,
+            15,
+            8,
+            234,
+            50
+          ],
+          "gold_chunks": [
+            14
+          ]
+        },
+        "q05": {
+          "rank_of_first_gold": 31,
+          "top5": [
+            8,
+            16,
+            151,
+            18,
+            180
+          ],
+          "gold_chunks": [
+            17
+          ]
+        },
+        "q06": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            26,
+            30,
+            255,
+            307,
+            220
+          ],
+          "gold_chunks": [
+            26
+          ]
+        },
+        "q07": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            25,
+            296,
+            35,
+            129,
+            79
+          ],
+          "gold_chunks": [
+            25
+          ]
+        },
+        "q08": {
+          "rank_of_first_gold": 19,
+          "top5": [
+            30,
+            260,
+            95,
+            27,
+            310
+          ],
+          "gold_chunks": [
+            26
+          ]
+        },
+        "q09": {
+          "rank_of_first_gold": 27,
+          "top5": [
+            68,
+            63,
+            72,
+            123,
+            133
+          ],
+          "gold_chunks": [
+            53
+          ]
+        },
+        "q10": {
+          "rank_of_first_gold": 29,
+          "top5": [
+            82,
+            125,
+            83,
+            80,
+            133
+          ],
+          "gold_chunks": [
+            53,
+            54
+          ]
+        },
+        "q11": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            96,
+            410,
+            66,
+            95,
+            82
+          ],
+          "gold_chunks": [
+            66
+          ]
+        },
+        "q12": {
+          "rank_of_first_gold": 7,
+          "top5": [
+            131,
+            114,
+            133,
+            72,
+            116
+          ],
+          "gold_chunks": [
+            71
+          ]
+        },
+        "q13": {
+          "rank_of_first_gold": 7,
+          "top5": [
+            123,
+            68,
+            124,
+            69,
+            114
+          ],
+          "gold_chunks": [
+            75,
+            76
+          ]
+        },
+        "q14": {
+          "rank_of_first_gold": null,
+          "top5": [
+            86,
+            85,
+            82,
+            87,
+            91
+          ],
+          "gold_chunks": [
+            54
+          ]
+        },
+        "q15": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            120,
+            63,
+            121,
+            96,
+            65
+          ],
+          "gold_chunks": [
+            120
+          ]
+        },
+        "q16": {
+          "rank_of_first_gold": 19,
+          "top5": [
+            114,
+            63,
+            124,
+            70,
+            65
+          ],
+          "gold_chunks": [
+            58
+          ]
+        },
+        "q17": {
+          "rank_of_first_gold": 35,
+          "top5": [
+            410,
+            340,
+            344,
+            332,
+            368
+          ],
+          "gold_chunks": [
+            342
+          ]
+        },
+        "q18": {
+          "rank_of_first_gold": 39,
+          "top5": [
+            410,
+            370,
+            341,
+            355,
+            357
+          ],
+          "gold_chunks": [
+            335
+          ]
+        },
+        "q19": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            377,
+            357,
+            346,
+            355,
+            341
+          ],
+          "gold_chunks": [
+            346
+          ]
+        },
+        "q20": {
+          "rank_of_first_gold": 9,
+          "top5": [
+            341,
+            340,
+            410,
+            358,
+            368
+          ],
+          "gold_chunks": [
+            339
+          ]
+        },
+        "q21": {
+          "rank_of_first_gold": 20,
+          "top5": [
+            365,
+            348,
+            368,
+            357,
+            370
+          ],
+          "gold_chunks": [
+            356
+          ]
+        },
+        "q22": {
+          "rank_of_first_gold": 4,
+          "top5": [
+            408,
+            368,
+            353,
+            338,
+            407
+          ],
+          "gold_chunks": [
+            337,
+            338
+          ]
+        },
+        "q23": {
+          "rank_of_first_gold": 25,
+          "top5": [
+            354,
+            348,
+            347,
+            350,
+            406
+          ],
+          "gold_chunks": [
+            332
+          ]
+        },
+        "q24": {
+          "rank_of_first_gold": 9,
+          "top5": [
+            404,
+            370,
+            369,
+            341,
+            412
+          ],
+          "gold_chunks": [
+            346
+          ]
+        },
+        "q25": {
+          "rank_of_first_gold": 13,
+          "top5": [
+            236,
+            239,
+            311,
+            307,
+            305
+          ],
+          "gold_chunks": [
+            215
+          ]
+        },
+        "q26": {
+          "rank_of_first_gold": 21,
+          "top5": [
+            233,
+            244,
+            232,
+            275,
+            245
+          ],
+          "gold_chunks": [
+            215
+          ]
+        },
+        "q27": {
+          "rank_of_first_gold": 10,
+          "top5": [
+            245,
+            232,
+            261,
+            233,
+            275
+          ],
+          "gold_chunks": [
+            230
+          ]
+        },
+        "q28": {
+          "rank_of_first_gold": 10,
+          "top5": [
+            232,
+            233,
+            245,
+            275,
+            219
+          ],
+          "gold_chunks": [
+            231
+          ]
+        },
+        "q29": {
+          "rank_of_first_gold": 12,
+          "top5": [
+            236,
+            239,
+            307,
+            304,
+            305
+          ],
+          "gold_chunks": [
+            235
+          ]
+        },
+        "q30": {
+          "rank_of_first_gold": 22,
+          "top5": [
+            329,
+            322,
+            304,
+            269,
+            323
+          ],
+          "gold_chunks": [
+            235
+          ]
+        },
+        "q31": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            236,
+            305,
+            307,
+            304,
+            275
+          ],
+          "gold_chunks": [
+            236
+          ]
+        },
+        "q32": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            245,
+            232,
+            233,
+            261,
+            263
+          ],
+          "gold_chunks": [
+            244,
+            245
+          ]
+        },
+        "q33": {
+          "rank_of_first_gold": 15,
+          "top5": [
+            167,
+            173,
+            141,
+            158,
+            162
+          ],
+          "gold_chunks": [
+            134
+          ]
+        },
+        "q34": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            134,
+            141,
+            167,
+            155,
+            151
+          ],
+          "gold_chunks": [
+            134
+          ]
+        },
+        "q35": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            150,
+            139,
+            149,
+            146,
+            148
+          ],
+          "gold_chunks": [
+            139
+          ]
+        },
+        "q36": {
+          "rank_of_first_gold": 5,
+          "top5": [
+            184,
+            195,
+            196,
+            197,
+            135
+          ],
+          "gold_chunks": [
+            135
+          ]
+        },
+        "q37": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            179,
+            175,
+            173,
+            211,
+            206
+          ],
+          "gold_chunks": [
+            175
+          ]
+        },
+        "q38": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            175,
+            179,
+            180,
+            162,
+            155
+          ],
+          "gold_chunks": [
+            175
+          ]
+        },
+        "q39": {
+          "rank_of_first_gold": 15,
+          "top5": [
+            156,
+            170,
+            145,
+            149,
+            168
+          ],
+          "gold_chunks": [
+            140
+          ]
+        },
+        "q40": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            150,
+            180,
+            148,
+            149,
+            139
+          ],
+          "gold_chunks": [
+            148
+          ]
+        }
+      }
+    },
+    "BM25 (sparse only)": {
+      "mode": "sparse",
+      "use_reranker": false,
+      "recall@1": 0.4,
+      "recall@5": 0.7,
+      "recall@10": 0.825,
+      "mrr@10": 0.559,
+      "retrieval_ms_median": 1.01,
+      "retrieval_ms_p95": 1.58,
+      "per_question": {
+        "q01": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            28,
+            29,
+            1,
+            37,
+            38
+          ],
+          "gold_chunks": [
+            1
+          ]
+        },
+        "q02": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            1,
+            28,
+            376,
+            29,
+            123
+          ],
+          "gold_chunks": [
+            1
+          ]
+        },
+        "q03": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            8,
+            9,
+            254,
+            20,
+            66
+          ],
+          "gold_chunks": [
+            8
+          ]
+        },
+        "q04": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            51,
+            14,
+            261,
+            49,
+            11
+          ],
+          "gold_chunks": [
+            14
+          ]
+        },
+        "q05": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            17,
+            16,
+            51,
+            49,
+            8
+          ],
+          "gold_chunks": [
+            17
+          ]
+        },
+        "q06": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            26,
+            123,
+            306,
+            30,
+            403
+          ],
+          "gold_chunks": [
+            26
+          ]
+        },
+        "q07": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            25,
+            128,
+            37,
+            123,
+            1
+          ],
+          "gold_chunks": [
+            25
+          ]
+        },
+        "q08": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            26,
+            30,
+            403,
+            343,
+            51
+          ],
+          "gold_chunks": [
+            26
+          ]
+        },
+        "q09": {
+          "rank_of_first_gold": 46,
+          "top5": [
+            261,
+            130,
+            51,
+            49,
+            117
+          ],
+          "gold_chunks": [
+            53
+          ]
+        },
+        "q10": {
+          "rank_of_first_gold": 8,
+          "top5": [
+            129,
+            51,
+            247,
+            49,
+            82
+          ],
+          "gold_chunks": [
+            53,
+            54
+          ]
+        },
+        "q11": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            410,
+            270,
+            66,
+            101,
+            82
+          ],
+          "gold_chunks": [
+            66
+          ]
+        },
+        "q12": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            71,
+            70,
+            63,
+            116,
+            56
+          ],
+          "gold_chunks": [
+            71
+          ]
+        },
+        "q13": {
+          "rank_of_first_gold": null,
+          "top5": [
+            123,
+            72,
+            122,
+            270,
+            70
+          ],
+          "gold_chunks": [
+            75,
+            76
+          ]
+        },
+        "q14": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            79,
+            54,
+            86,
+            85,
+            53
+          ],
+          "gold_chunks": [
+            54
+          ]
+        },
+        "q15": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            120,
+            403,
+            123,
+            79,
+            376
+          ],
+          "gold_chunks": [
+            120
+          ]
+        },
+        "q16": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            58,
+            57,
+            71,
+            114,
+            116
+          ],
+          "gold_chunks": [
+            58
+          ]
+        },
+        "q17": {
+          "rank_of_first_gold": 12,
+          "top5": [
+            332,
+            376,
+            230,
+            344,
+            361
+          ],
+          "gold_chunks": [
+            342
+          ]
+        },
+        "q18": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            335,
+            342,
+            366,
+            361,
+            354
+          ],
+          "gold_chunks": [
+            335
+          ]
+        },
+        "q19": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            367,
+            346,
+            360,
+            377,
+            376
+          ],
+          "gold_chunks": [
+            346
+          ]
+        },
+        "q20": {
+          "rank_of_first_gold": 13,
+          "top5": [
+            344,
+            369,
+            21,
+            256,
+            402
+          ],
+          "gold_chunks": [
+            339
+          ]
+        },
+        "q21": {
+          "rank_of_first_gold": null,
+          "top5": [
+            411,
+            348,
+            337,
+            370,
+            357
+          ],
+          "gold_chunks": [
+            356
+          ]
+        },
+        "q22": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            360,
+            337,
+            338,
+            361,
+            352
+          ],
+          "gold_chunks": [
+            337,
+            338
+          ]
+        },
+        "q23": {
+          "rank_of_first_gold": 9,
+          "top5": [
+            354,
+            411,
+            350,
+            405,
+            347
+          ],
+          "gold_chunks": [
+            332
+          ]
+        },
+        "q24": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            346,
+            342,
+            404,
+            345,
+            51
+          ],
+          "gold_chunks": [
+            346
+          ]
+        },
+        "q25": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            214,
+            215,
+            232,
+            236,
+            219
+          ],
+          "gold_chunks": [
+            215
+          ]
+        },
+        "q26": {
+          "rank_of_first_gold": 6,
+          "top5": [
+            261,
+            275,
+            292,
+            226,
+            229
+          ],
+          "gold_chunks": [
+            215
+          ]
+        },
+        "q27": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            261,
+            230,
+            232,
+            270,
+            269
+          ],
+          "gold_chunks": [
+            230
+          ]
+        },
+        "q28": {
+          "rank_of_first_gold": 20,
+          "top5": [
+            83,
+            219,
+            270,
+            276,
+            261
+          ],
+          "gold_chunks": [
+            231
+          ]
+        },
+        "q29": {
+          "rank_of_first_gold": 6,
+          "top5": [
+            236,
+            232,
+            251,
+            214,
+            275
+          ],
+          "gold_chunks": [
+            235
+          ]
+        },
+        "q30": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            235,
+            261,
+            263,
+            262,
+            329
+          ],
+          "gold_chunks": [
+            235
+          ]
+        },
+        "q31": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            236,
+            214,
+            251,
+            261,
+            255
+          ],
+          "gold_chunks": [
+            236
+          ]
+        },
+        "q32": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            261,
+            245,
+            232,
+            263,
+            244
+          ],
+          "gold_chunks": [
+            244,
+            245
+          ]
+        },
+        "q33": {
+          "rank_of_first_gold": 7,
+          "top5": [
+            142,
+            141,
+            207,
+            213,
+            167
+          ],
+          "gold_chunks": [
+            134
+          ]
+        },
+        "q34": {
+          "rank_of_first_gold": 5,
+          "top5": [
+            141,
+            142,
+            270,
+            140,
+            134
+          ],
+          "gold_chunks": [
+            134
+          ]
+        },
+        "q35": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            139,
+            146,
+            148,
+            147,
+            149
+          ],
+          "gold_chunks": [
+            139
+          ]
+        },
+        "q36": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            184,
+            135,
+            183,
+            197,
+            205
+          ],
+          "gold_chunks": [
+            135
+          ]
+        },
+        "q37": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            179,
+            175,
+            141,
+            135,
+            173
+          ],
+          "gold_chunks": [
+            175
+          ]
+        },
+        "q38": {
+          "rank_of_first_gold": 20,
+          "top5": [
+            181,
+            261,
+            136,
+            230,
+            182
+          ],
+          "gold_chunks": [
+            175
+          ]
+        },
+        "q39": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            140,
+            144,
+            145,
+            156,
+            175
+          ],
+          "gold_chunks": [
+            140
+          ]
+        },
+        "q40": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            148,
+            168,
+            170,
+            139,
+            261
+          ],
+          "gold_chunks": [
+            148
+          ]
+        }
+      }
+    },
+    "Hybrid RRF (no rerank)": {
+      "mode": "hybrid",
+      "use_reranker": false,
+      "recall@1": 0.25,
+      "recall@5": 0.675,
+      "recall@10": 0.875,
+      "mrr@10": 0.4403,
+      "retrieval_ms_median": 1.07,
+      "retrieval_ms_p95": 1.62,
+      "per_question": {
+        "q01": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            29,
+            28,
+            1,
+            27,
+            37
+          ],
+          "gold_chunks": [
+            1
+          ]
+        },
+        "q02": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            29,
+            28,
+            1,
+            27,
+            236
+          ],
+          "gold_chunks": [
+            1
+          ]
+        },
+        "q03": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            8,
+            9,
+            15,
+            243,
+            174
+          ],
+          "gold_chunks": [
+            8
+          ]
+        },
+        "q04": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            14,
+            8,
+            234,
+            15,
+            11
+          ],
+          "gold_chunks": [
+            14
+          ]
+        },
+        "q05": {
+          "rank_of_first_gold": 5,
+          "top5": [
+            16,
+            8,
+            18,
+            21,
+            17
+          ],
+          "gold_chunks": [
+            17
+          ]
+        },
+        "q06": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            26,
+            30,
+            306,
+            307,
+            310
+          ],
+          "gold_chunks": [
+            26
+          ]
+        },
+        "q07": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            25,
+            128,
+            37,
+            1,
+            68
+          ],
+          "gold_chunks": [
+            25
+          ]
+        },
+        "q08": {
+          "rank_of_first_gold": 4,
+          "top5": [
+            30,
+            235,
+            310,
+            26,
+            220
+          ],
+          "gold_chunks": [
+            26
+          ]
+        },
+        "q09": {
+          "rank_of_first_gold": 21,
+          "top5": [
+            123,
+            117,
+            114,
+            82,
+            124
+          ],
+          "gold_chunks": [
+            53
+          ]
+        },
+        "q10": {
+          "rank_of_first_gold": 8,
+          "top5": [
+            82,
+            125,
+            94,
+            123,
+            79
+          ],
+          "gold_chunks": [
+            53,
+            54
+          ]
+        },
+        "q11": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            410,
+            66,
+            96,
+            82,
+            95
+          ],
+          "gold_chunks": [
+            66
+          ]
+        },
+        "q12": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            131,
+            71,
+            70,
+            116,
+            114
+          ],
+          "gold_chunks": [
+            71
+          ]
+        },
+        "q13": {
+          "rank_of_first_gold": 20,
+          "top5": [
+            123,
+            68,
+            72,
+            70,
+            69
+          ],
+          "gold_chunks": [
+            75,
+            76
+          ]
+        },
+        "q14": {
+          "rank_of_first_gold": 23,
+          "top5": [
+            86,
+            85,
+            82,
+            79,
+            87
+          ],
+          "gold_chunks": [
+            54
+          ]
+        },
+        "q15": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            120,
+            79,
+            123,
+            122,
+            63
+          ],
+          "gold_chunks": [
+            120
+          ]
+        },
+        "q16": {
+          "rank_of_first_gold": 5,
+          "top5": [
+            114,
+            63,
+            131,
+            72,
+            58
+          ],
+          "gold_chunks": [
+            58
+          ]
+        },
+        "q17": {
+          "rank_of_first_gold": 9,
+          "top5": [
+            332,
+            344,
+            376,
+            335,
+            411
+          ],
+          "gold_chunks": [
+            342
+          ]
+        },
+        "q18": {
+          "rank_of_first_gold": 10,
+          "top5": [
+            354,
+            412,
+            366,
+            338,
+            357
+          ],
+          "gold_chunks": [
+            335
+          ]
+        },
+        "q19": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            377,
+            346,
+            376,
+            338,
+            360
+          ],
+          "gold_chunks": [
+            346
+          ]
+        },
+        "q20": {
+          "rank_of_first_gold": 6,
+          "top5": [
+            344,
+            341,
+            340,
+            365,
+            370
+          ],
+          "gold_chunks": [
+            339
+          ]
+        },
+        "q21": {
+          "rank_of_first_gold": 38,
+          "top5": [
+            348,
+            368,
+            357,
+            370,
+            337
+          ],
+          "gold_chunks": [
+            356
+          ]
+        },
+        "q22": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            338,
+            353,
+            361,
+            360,
+            352
+          ],
+          "gold_chunks": [
+            337,
+            338
+          ]
+        },
+        "q23": {
+          "rank_of_first_gold": 10,
+          "top5": [
+            354,
+            350,
+            347,
+            405,
+            348
+          ],
+          "gold_chunks": [
+            332
+          ]
+        },
+        "q24": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            404,
+            346,
+            341,
+            345,
+            369
+          ],
+          "gold_chunks": [
+            346
+          ]
+        },
+        "q25": {
+          "rank_of_first_gold": 4,
+          "top5": [
+            236,
+            232,
+            219,
+            215,
+            239
+          ],
+          "gold_chunks": [
+            215
+          ]
+        },
+        "q26": {
+          "rank_of_first_gold": 8,
+          "top5": [
+            275,
+            261,
+            244,
+            233,
+            232
+          ],
+          "gold_chunks": [
+            215
+          ]
+        },
+        "q27": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            261,
+            232,
+            230,
+            265,
+            270
+          ],
+          "gold_chunks": [
+            230
+          ]
+        },
+        "q28": {
+          "rank_of_first_gold": 7,
+          "top5": [
+            232,
+            219,
+            261,
+            236,
+            245
+          ],
+          "gold_chunks": [
+            231
+          ]
+        },
+        "q29": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            236,
+            232,
+            235,
+            219,
+            239
+          ],
+          "gold_chunks": [
+            235
+          ]
+        },
+        "q30": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            329,
+            269,
+            235,
+            322,
+            323
+          ],
+          "gold_chunks": [
+            235
+          ]
+        },
+        "q31": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            236,
+            314,
+            232,
+            219,
+            275
+          ],
+          "gold_chunks": [
+            236
+          ]
+        },
+        "q32": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            245,
+            261,
+            232,
+            263,
+            244
+          ],
+          "gold_chunks": [
+            244,
+            245
+          ]
+        },
+        "q33": {
+          "rank_of_first_gold": 11,
+          "top5": [
+            141,
+            167,
+            173,
+            207,
+            213
+          ],
+          "gold_chunks": [
+            134
+          ]
+        },
+        "q34": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            141,
+            134,
+            142,
+            167,
+            177
+          ],
+          "gold_chunks": [
+            134
+          ]
+        },
+        "q35": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            139,
+            146,
+            150,
+            149,
+            148
+          ],
+          "gold_chunks": [
+            139
+          ]
+        },
+        "q36": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            184,
+            135,
+            197,
+            196,
+            205
+          ],
+          "gold_chunks": [
+            135
+          ]
+        },
+        "q37": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            179,
+            175,
+            173,
+            211,
+            207
+          ],
+          "gold_chunks": [
+            175
+          ]
+        },
+        "q38": {
+          "rank_of_first_gold": 4,
+          "top5": [
+            181,
+            136,
+            162,
+            175,
+            178
+          ],
+          "gold_chunks": [
+            175
+          ]
+        },
+        "q39": {
+          "rank_of_first_gold": 6,
+          "top5": [
+            156,
+            145,
+            144,
+            170,
+            149
+          ],
+          "gold_chunks": [
+            140
+          ]
+        },
+        "q40": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            148,
+            139,
+            150,
+            149,
+            143
+          ],
+          "gold_chunks": [
+            148
+          ]
+        }
+      }
+    },
+    "Hybrid RRF + cross-encoder": {
+      "mode": "hybrid",
+      "use_reranker": true,
+      "recall@1": 0.5,
+      "recall@5": 0.85,
+      "recall@10": 0.975,
+      "mrr@10": 0.6538,
+      "retrieval_ms_median": 922.06,
+      "retrieval_ms_p95": 1093.3,
+      "per_question": {
+        "q01": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            29,
+            1,
+            28,
+            27,
+            38
+          ],
+          "gold_chunks": [
+            1
+          ]
+        },
+        "q02": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            1,
+            29,
+            27,
+            28,
+            26
+          ],
+          "gold_chunks": [
+            1
+          ]
+        },
+        "q03": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            8,
+            136,
+            9,
+            37,
+            23
+          ],
+          "gold_chunks": [
+            8
+          ]
+        },
+        "q04": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            14,
+            15,
+            234,
+            8,
+            5
+          ],
+          "gold_chunks": [
+            14
+          ]
+        },
+        "q05": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            17,
+            16,
+            8,
+            24,
+            23
+          ],
+          "gold_chunks": [
+            17
+          ]
+        },
+        "q06": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            5,
+            26,
+            25,
+            391,
+            178
+          ],
+          "gold_chunks": [
+            26
+          ]
+        },
+        "q07": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            25,
+            37,
+            295,
+            36,
+            35
+          ],
+          "gold_chunks": [
+            25
+          ]
+        },
+        "q08": {
+          "rank_of_first_gold": 5,
+          "top5": [
+            38,
+            27,
+            235,
+            310,
+            26
+          ],
+          "gold_chunks": [
+            26
+          ]
+        },
+        "q09": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            53,
+            63,
+            59,
+            68,
+            117
+          ],
+          "gold_chunks": [
+            53
+          ]
+        },
+        "q10": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            53,
+            82,
+            80,
+            54,
+            247
+          ],
+          "gold_chunks": [
+            53,
+            54
+          ]
+        },
+        "q11": {
+          "rank_of_first_gold": 7,
+          "top5": [
+            96,
+            21,
+            410,
+            88,
+            80
+          ],
+          "gold_chunks": [
+            66
+          ]
+        },
+        "q12": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            133,
+            71,
+            70,
+            119,
+            72
+          ],
+          "gold_chunks": [
+            71
+          ]
+        },
+        "q13": {
+          "rank_of_first_gold": 9,
+          "top5": [
+            53,
+            35,
+            130,
+            124,
+            69
+          ],
+          "gold_chunks": [
+            75,
+            76
+          ]
+        },
+        "q14": {
+          "rank_of_first_gold": 6,
+          "top5": [
+            86,
+            85,
+            87,
+            79,
+            80
+          ],
+          "gold_chunks": [
+            54
+          ]
+        },
+        "q15": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            120,
+            95,
+            96,
+            121,
+            86
+          ],
+          "gold_chunks": [
+            120
+          ]
+        },
+        "q16": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            70,
+            58,
+            63,
+            91,
+            69
+          ],
+          "gold_chunks": [
+            58
+          ]
+        },
+        "q17": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            332,
+            410,
+            342,
+            344,
+            335
+          ],
+          "gold_chunks": [
+            342
+          ]
+        },
+        "q18": {
+          "rank_of_first_gold": 11,
+          "top5": [
+            366,
+            332,
+            378,
+            341,
+            340
+          ],
+          "gold_chunks": [
+            335
+          ]
+        },
+        "q19": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            346,
+            367,
+            332,
+            331,
+            366
+          ],
+          "gold_chunks": [
+            346
+          ]
+        },
+        "q20": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            340,
+            339,
+            365,
+            344,
+            369
+          ],
+          "gold_chunks": [
+            339
+          ]
+        },
+        "q21": {
+          "rank_of_first_gold": 8,
+          "top5": [
+            348,
+            368,
+            411,
+            370,
+            357
+          ],
+          "gold_chunks": [
+            356
+          ]
+        },
+        "q22": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            338,
+            337,
+            360,
+            361,
+            364
+          ],
+          "gold_chunks": [
+            337,
+            338
+          ]
+        },
+        "q23": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            354,
+            348,
+            332,
+            347,
+            406
+          ],
+          "gold_chunks": [
+            332
+          ]
+        },
+        "q24": {
+          "rank_of_first_gold": 5,
+          "top5": [
+            336,
+            373,
+            342,
+            347,
+            346
+          ],
+          "gold_chunks": [
+            346
+          ]
+        },
+        "q25": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            215,
+            214,
+            235,
+            239,
+            260
+          ],
+          "gold_chunks": [
+            215
+          ]
+        },
+        "q26": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            215,
+            233,
+            229,
+            274,
+            292
+          ],
+          "gold_chunks": [
+            215
+          ]
+        },
+        "q27": {
+          "rank_of_first_gold": 5,
+          "top5": [
+            233,
+            221,
+            231,
+            215,
+            230
+          ],
+          "gold_chunks": [
+            230
+          ]
+        },
+        "q28": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            231,
+            299,
+            176,
+            300,
+            119
+          ],
+          "gold_chunks": [
+            231
+          ]
+        },
+        "q29": {
+          "rank_of_first_gold": 6,
+          "top5": [
+            239,
+            251,
+            320,
+            214,
+            236
+          ],
+          "gold_chunks": [
+            235
+          ]
+        },
+        "q30": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            235,
+            329,
+            262,
+            256,
+            264
+          ],
+          "gold_chunks": [
+            235
+          ]
+        },
+        "q31": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            236,
+            320,
+            214,
+            251,
+            239
+          ],
+          "gold_chunks": [
+            236
+          ]
+        },
+        "q32": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            157,
+            245,
+            264,
+            176,
+            260
+          ],
+          "gold_chunks": [
+            244,
+            245
+          ]
+        },
+        "q33": {
+          "rank_of_first_gold": 3,
+          "top5": [
+            167,
+            142,
+            134,
+            213,
+            141
+          ],
+          "gold_chunks": [
+            134
+          ]
+        },
+        "q34": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            134,
+            141,
+            167,
+            142,
+            157
+          ],
+          "gold_chunks": [
+            134
+          ]
+        },
+        "q35": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            139,
+            146,
+            149,
+            148,
+            150
+          ],
+          "gold_chunks": [
+            139
+          ]
+        },
+        "q36": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            135,
+            184,
+            197,
+            183,
+            195
+          ],
+          "gold_chunks": [
+            135
+          ]
+        },
+        "q37": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            175,
+            179,
+            167,
+            134,
+            136
+          ],
+          "gold_chunks": [
+            175
+          ]
+        },
+        "q38": {
+          "rank_of_first_gold": 2,
+          "top5": [
+            179,
+            175,
+            134,
+            135,
+            136
+          ],
+          "gold_chunks": [
+            175
+          ]
+        },
+        "q39": {
+          "rank_of_first_gold": 1,
+          "top5": [
+            140,
+            145,
+            12,
+            149,
+            150
+          ],
+          "gold_chunks": [
+            140
+          ]
+        },
+        "q40": {
+          "rank_of_first_gold": 4,
+          "top5": [
+            8,
+            267,
+            149,
+            148,
+            176
+          ],
+          "gold_chunks": [
+            148
+          ]
+        }
+      }
+    }
+  }
+}

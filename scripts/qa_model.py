@@ -5,18 +5,29 @@ from huggingface_hub import InferenceClient
 
 load_dotenv()
 
-def load_model() -> InferenceClient:
+def load_model():
     """
-    Initializes a direct Hugging Face Inference Client.
-    Points to a native, high-availability model to bypass provider routing 404s.
+    Initializes the chat backend.
+
+    LLM_BACKEND=ollama -> local Ollama model (OLLAMA_MODEL, default gemma4:e2b)
+    LLM_BACKEND=hf     -> Hugging Face InferenceClient (HF_MODEL)
     """
     hf_token = os.getenv("HF_TOKEN")
+    backend = os.getenv("LLM_BACKEND", "hf").strip().lower()
+
+    if backend == "ollama":
+        from scripts.ollama_client import OllamaClient
+        return OllamaClient(model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"))
+
     if not hf_token:
         raise EnvironmentError("HF_TOKEN not set in environment variables.")
 
-    # Swapping to Qwen 2.5 Instruct which sits natively on HF core infrastructure
+    # HF_MODEL lets deployments swap the backing model without code changes.
+    # Qwen/Qwen2.5-7B-Instruct was retired from the HF router, so the default
+    # is the closest available 7B instruction model.
+    model = os.getenv("HF_MODEL", "Qwen/Qwen2.5-Coder-7B-Instruct")
     return InferenceClient(
-        model="Qwen/Qwen2.5-7B-Instruct",
+        model=model,
         token=hf_token
     )
 
@@ -46,15 +57,18 @@ class HallucinationChecker:
             }
         ]
         
-        response = self.client.chat_completion(messages=messages, max_tokens=5, temperature=0.1)
+        response = self.client.chat_completion(messages=messages, max_tokens=16, temperature=0.1)
         response_text = response.choices[0].message.content.strip().upper()
         return "YES" in response_text
 
 
-def answer_question(client: InferenceClient, question: str, retrieved_chunks: list, is_confident: bool) -> dict:
+def answer_question(client: InferenceClient, question: str, retrieved_chunks: list, is_confident: bool, enable_reflection: bool = True) -> dict:
     """
     Answers a question by mapping inputs directly to InferenceClient.chat_completion
     as recommended by Hugging Face documentation.
+
+    :param enable_reflection: when False, skips the HallucinationChecker
+        verification pass (used by the benchmark to measure its effect).
     """
     if not is_confident or not retrieved_chunks:
         return {
@@ -112,7 +126,7 @@ def answer_question(client: InferenceClient, question: str, retrieved_chunks: li
         }
 
     # Run Fallback Verification Pass
-    if parsed_response.get("has_answer", False):
+    if enable_reflection and parsed_response.get("has_answer", False):
         checker = HallucinationChecker(client=client)
         is_faithful = checker.verify_faithfulness(parsed_response["answer"], retrieved_chunks)
         
